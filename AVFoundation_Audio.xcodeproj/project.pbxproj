@@ -14,6 +14,14 @@
 		15B5622E25DE323900D5B871 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15B5622D25DE323900D5B871 /* Assets.xcassets */; };
 		15B5623125DE323900D5B871 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B5622F25DE323900D5B871 /* LaunchScreen.storyboard */; };
 		15B5623B25DE403800D5B871 /* Queen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 15B5623A25DE403800D5B871 /* Queen.mp3 */; };
+		CE9C1A7628E4D4A20048B2CA /* Sodade.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE9C1A7128E4D49F0048B2CA /* Sodade.mp3 */; };
+		CE9C1A7728E4D4A20048B2CA /* Luiza.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE9C1A7228E4D4A10048B2CA /* Luiza.mp3 */; };
+		CE9C1A7828E4D4A20048B2CA /* Besame Mucho.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE9C1A7328E4D4A10048B2CA /* Besame Mucho.mp3 */; };
+		CE9C1A7928E4D4A20048B2CA /* Tudo Tem Se Limite.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE9C1A7428E4D4A20048B2CA /* Tudo Tem Se Limite.mp3 */; };
+		CE9C1A7A28E4D4A20048B2CA /* Sabine Largam.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE9C1A7528E4D4A20048B2CA /* Sabine Largam.mp3 */; };
+		CEC7C33828EE0BA900A0DA1B /* RecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC7C33728EE0BA900A0DA1B /* RecorderViewController.swift */; };
+		CEE6BEDC28EB4DE100C04C67 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE6BEDB28EB4DE100C04C67 /* VideoViewController.swift */; };
+		CEE6BEDF28EC9C5200C04C67 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE6BEDE28EC9C5200C04C67 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,14 @@
 		15B5623025DE323900D5B871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15B5623225DE323900D5B871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15B5623A25DE403800D5B871 /* Queen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Queen.mp3; sourceTree = "<group>"; };
+		CE9C1A7128E4D49F0048B2CA /* Sodade.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sodade.mp3; sourceTree = "<group>"; };
+		CE9C1A7228E4D4A10048B2CA /* Luiza.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Luiza.mp3; sourceTree = "<group>"; };
+		CE9C1A7328E4D4A10048B2CA /* Besame Mucho.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Besame Mucho.mp3"; sourceTree = "<group>"; };
+		CE9C1A7428E4D4A20048B2CA /* Tudo Tem Se Limite.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Tudo Tem Se Limite.mp3"; sourceTree = "<group>"; };
+		CE9C1A7528E4D4A20048B2CA /* Sabine Largam.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Sabine Largam.mp3"; sourceTree = "<group>"; };
+		CEC7C33728EE0BA900A0DA1B /* RecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderViewController.swift; sourceTree = "<group>"; };
+		CEE6BEDB28EB4DE100C04C67 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		CEE6BEDE28EC9C5200C04C67 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE6BEDF28EC9C5200C04C67 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +61,7 @@
 			children = (
 				15B5622325DE323700D5B871 /* AVFoundation_Audio */,
 				15B5622225DE323700D5B871 /* Products */,
+				CEE6BEDD28EC9C5100C04C67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +79,8 @@
 				15B5622425DE323700D5B871 /* AppDelegate.swift */,
 				15B5622625DE323700D5B871 /* SceneDelegate.swift */,
 				15B5622825DE323700D5B871 /* ViewController.swift */,
+				CEE6BEDB28EB4DE100C04C67 /* VideoViewController.swift */,
+				CEC7C33728EE0BA900A0DA1B /* RecorderViewController.swift */,
 				15B5622A25DE323700D5B871 /* Main.storyboard */,
 				15B5622D25DE323900D5B871 /* Assets.xcassets */,
 				15B5622F25DE323900D5B871 /* LaunchScreen.storyboard */,
@@ -73,9 +93,22 @@
 		15B5623925DE3FDE00D5B871 /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				CE9C1A7328E4D4A10048B2CA /* Besame Mucho.mp3 */,
+				CE9C1A7128E4D49F0048B2CA /* Sodade.mp3 */,
+				CE9C1A7228E4D4A10048B2CA /* Luiza.mp3 */,
+				CE9C1A7428E4D4A20048B2CA /* Tudo Tem Se Limite.mp3 */,
+				CE9C1A7528E4D4A20048B2CA /* Sabine Largam.mp3 */,
 				15B5623A25DE403800D5B871 /* Queen.mp3 */,
 			);
 			path = Music;
+			sourceTree = "<group>";
+		};
+		CEE6BEDD28EC9C5100C04C67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEE6BEDE28EC9C5200C04C67 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,10 +168,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9C1A7828E4D4A20048B2CA /* Besame Mucho.mp3 in Resources */,
+				CE9C1A7628E4D4A20048B2CA /* Sodade.mp3 in Resources */,
+				CE9C1A7728E4D4A20048B2CA /* Luiza.mp3 in Resources */,
 				15B5623125DE323900D5B871 /* LaunchScreen.storyboard in Resources */,
 				15B5622E25DE323900D5B871 /* Assets.xcassets in Resources */,
 				15B5623B25DE403800D5B871 /* Queen.mp3 in Resources */,
+				CE9C1A7928E4D4A20048B2CA /* Tudo Tem Se Limite.mp3 in Resources */,
 				15B5622C25DE323700D5B871 /* Main.storyboard in Resources */,
+				CE9C1A7A28E4D4A20048B2CA /* Sabine Largam.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +190,8 @@
 				15B5622925DE323700D5B871 /* ViewController.swift in Sources */,
 				15B5622525DE323700D5B871 /* AppDelegate.swift in Sources */,
 				15B5622725DE323700D5B871 /* SceneDelegate.swift in Sources */,
+				CEC7C33828EE0BA900A0DA1B /* RecorderViewController.swift in Sources */,
+				CEE6BEDC28EB4DE100C04C67 /* VideoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
