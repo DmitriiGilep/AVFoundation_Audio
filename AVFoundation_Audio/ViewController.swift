@@ -32,20 +32,29 @@ final class ViewController: UIViewController {
         
     }
     
+    @IBOutlet weak var playButton: UIButton!
+    
     @IBOutlet weak var nameOfSong: UILabel!
     
     // кнопка начала проигрывания плейера: если плейер играет, то пауза и установление текущего времени проигрывания; если не игрывает, но время больше нуля, то просто продолжить играть после паузы; иначе (если не играет и время 0) - новая композиция
     @IBAction func PlayButton(_ sender: Any) {
         if Player.isPlaying {
             Player.pause()
+            playButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
             currentTime = Player.currentTime
         } else if currentTime != 0.00 {
             Player.play()
+            playButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
         } else {
             if let currentSong = Player.url?.deletingPathExtension().lastPathComponent {
                 playSong(nameOfSong: currentSong)
+                playButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+
+                
             } else {
                 playSong(nameOfSong: songsDict[1]!)
+                playButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+
             }
         }
         
@@ -53,16 +62,7 @@ final class ViewController: UIViewController {
     
     // кнопка остановки: если играет, то стоп и время проигрывания 0 (то есть плей будет играть заново; если не играет (то есть на паузе, например, то обнулить, чтобы опять играл заново)
     @IBAction func StopButton(_ sender: Any) {
-        if Player.isPlaying {
-            Player.stop()
-            Player.currentTime = 0
-            nameOfSong.text = initialText
-        }
-        else {
-            Player.currentTime = 0
-            nameOfSong.text = initialText
-            print("Already stopped!")
-        }
+        audioPlayerDidFinishPlaying(Player, successfully: true)
     }
     
     // переход назад в зависимости от ключа текущей композиции
@@ -71,6 +71,8 @@ final class ViewController: UIViewController {
             for (key, song) in songsDict {
                 if currentSong == song {
                     playSong(nameOfSong: songsDict[key - 1] ?? songsDict[6]!)
+                    playButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+
                 }
             }
         }
@@ -82,6 +84,8 @@ final class ViewController: UIViewController {
             for (key, song) in songsDict {
                 if currentSong == song {
                     playSong(nameOfSong: songsDict[key + 1] ?? songsDict[1]!)
+                    playButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+
                 }
             }
             
@@ -107,5 +111,23 @@ final class ViewController: UIViewController {
         
     }
     
+    
+}
+
+extension ViewController: AVAudioPlayerDelegate {
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        if Player.isPlaying {
+            Player.stop()
+            Player.currentTime = 0
+            nameOfSong.text = initialText
+            playButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
+        }
+        else {
+            Player.currentTime = 0
+            nameOfSong.text = initialText
+            print("Already stopped!")
+        }
+    }
     
 }

@@ -82,6 +82,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="nameOfSong" destination="gH0-dd-ESq" id="5bM-PP-VBR"/>
+                        <outlet property="playButton" destination="bLh-VW-nOW" id="O9v-Rk-6wp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
